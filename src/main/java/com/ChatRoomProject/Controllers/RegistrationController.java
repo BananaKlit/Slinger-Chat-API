@@ -1,7 +1,8 @@
-package com.ChatRoomProject.DataAccess;
+package com.ChatRoomProject.Controllers;
 
-import com.ChatRoomProject.Model.UserDTO;
 import com.ChatRoomProject.Model.User;
+import com.ChatRoomProject.Model.DTO.UserDTO;
+import com.ChatRoomProject.Services.Interfaces.UserRepository;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,7 +25,6 @@ public class RegistrationController {
         user.setUsername(request.getUsername());
         user.setEmail(request.getEmail());
         user.setPassword(request.getPassword());
-        user.setRoles("test role");
         userRepository.save(user);
     }
 

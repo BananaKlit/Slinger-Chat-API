@@ -1,7 +1,8 @@
 package com.ChatRoomProject.Configuration;
 
 import com.ChatRoomProject.Model.User;
-import com.ChatRoomProject.DataAccess.UserRepository;
+import com.ChatRoomProject.Services.Interfaces.UserRepository;
+
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -26,7 +27,6 @@ public class MongoDetailsService implements UserDetailsService {
         return org.springframework.security.core.userdetails.User
                 .withUsername(user.getUsername())
                 .password(user.getPassword())
-                .roles(user.getRole())
                 .build();
     }
 }

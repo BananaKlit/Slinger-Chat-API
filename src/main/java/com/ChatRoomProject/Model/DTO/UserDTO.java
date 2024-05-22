@@ -1,4 +1,4 @@
-package com.ChatRoomProject.Model;
+package com.ChatRoomProject.Model.DTO;
 
 public class UserDTO {
 	
@@ -19,12 +19,6 @@ public class UserDTO {
 		public void setRoles(String role) {
 			this.role = role;
 		}
-		public UserDTO() {};
-	    public UserDTO(String username, String password, String email) {
-	        this.username = username;
-	        this.email = email;
-	        this.password = password;
-	    }
 		public String getUsername() {
 			return username;
 		}
